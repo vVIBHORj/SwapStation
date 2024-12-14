@@ -12,12 +12,12 @@ SwapStation is a decentralized exchange (DEX) built on Ethereum-compatible block
 
 ## Contract Details
 
-- **Contract Address**: `0x1facbedf4d72627d39bfba6fb3753623257f19faadd35e9ac06e370da4185f0e`
+- **Contract Address**: `0x9642BBd0AA5B38C02b4B8FFD9eA79Ff7821eE337`
 - **Network**: Mantle Sepolia Testnet
 
 ## Deployment
 
-- **Contract Address**: [View on Explorer](https://sepolia.etherscan.io/address/0x1facbedf4d72627d39bfba6fb3753623257f19faadd35e9ac06e370da4185f0e)
+- **Contract Address**: [View on Explorer](https://explorer.sepolia.mantle.xyz/address/0x9642BBd0AA5B38C02b4B8FFD9eA79Ff7821eE337)
 - **Coin Used**: MNT (Mantle Sepolia Testnet Token)
 
 ## How to Use
