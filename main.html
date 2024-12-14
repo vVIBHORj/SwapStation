@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwapStation</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.8.1/dist/web3.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #390179, #6c1e89);
+            margin: 0;
+            padding: 0;
+            color: #fff; /* White font for better contrast */
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            color: #fff; /* White font for better contrast */
+            margin-top: 30px;
+        }
+
+        h2 {
+            color: #0017af; /* White font for better contrast */
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        div {
+            margin: 30px auto;
+            padding: 20px;
+            max-width: 800px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-size: 1.1rem;
+            margin-right: 10px;
+            color: #390179; /* Dark purple for labels */
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 1rem;
+            border: 2px solid #390179;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: #390179;
+            color: white;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #5f00a2;
+        }
+
+        hr {
+            margin: 30px 0;
+            border: 0;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .status-box {
+            background-color: #fff8f9;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <h1>SwapStation</h1>
+
+    <!-- Set Exchange Rate Section -->
+    <div>
+        <h2>Set Exchange Rate</h2>
+        <label for="rate">Rate (1 TokenA = </label>
+        <input type="number" id="rate" placeholder="Enter rate">
+        <label for="rate"> TokenB ) </label><br>
+        <br>
+        <button onclick="setRate()">Set Rate</button>
+    </div>
+
+    <hr>
+
+    <!-- Swap Tokens Section -->
+    <div>
+        <h2>Swap Tokens</h2>
+        <label for="tokenA">Token A Address:</label>
+        <input type="text" id="tokenA" placeholder="Token A address">
+        <br>
+        <label for="tokenB">Token B Address:</label>
+        <input type="text" id="tokenB" placeholder="Token B address">
+        <br>
+        <label for="amountA">Amount of Token A to Swap:</label>
+        <input type="number" id="amountA" placeholder="Amount to swap">
+        <br>
+        <button onclick="swapTokens()">Swap</button>
+    </div>
+
+    <hr>
+
+    <!-- Add Liquidity Section -->
+    <div>
+        <h2>Add Liquidity</h2>
+        <label for="liquidityToken">Token Address:</label>
+        <input type="text" id="liquidityToken" placeholder="Token address">
+        <br>
+        <label for="amountLiquidity">Amount to Add:</label>
+        <input type="number" id="amountLiquidity" placeholder="Amount to add">
+        <br>
+        <button onclick="addLiquidity()">Add Liquidity</button>
+    </div>
+
+    <hr>
+
+    <!-- Status Section -->
+    <div>
+        <h2>Status</h2>
+        <p id="status" class="status-box">Your status messages will appear here.</p>
+    </div>
+
+    <script src="script.js"></script>       
+</body>
+</html>
